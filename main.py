@@ -32,7 +32,7 @@ async def read(stat: str):
     return data
 
 
-@app.put('/incident/{id}')
+@app.put('/incident_update/{id}')
 async def update(id: int, stat: Annotated[str, Body()]):
     conn = get_db_connection()
     cursor = conn.cursor()
